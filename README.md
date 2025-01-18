@@ -1,5 +1,5 @@
 # Custom_LSTM
-My simple custom LSTM NN for lstm phoneme prediction in a sequence of sounds. Trained on a russian language corpus.
+My simple custom LSTM NN for last phoneme predictions in a sequences of sounds.
 
 Instructions:
 1) Requires .seg_Y1 and corresponding .segB1 files for training;
