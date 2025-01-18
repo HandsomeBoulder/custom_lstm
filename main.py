@@ -66,8 +66,8 @@ def main():
     # Построение модели
     embed = Embedding(vocab_size=len(vocab),dim=128)  # Эмбеддинг слой для встраивания фонем
     model = LSTMCell(n_inputs=128, n_hidden=256, n_output=len(vocab))  # LSTM ячейка для обработки последовательностей фонем
-    criterion = CrossEntropyLoss()  # Функция потерь
-    optim = SGD(parameters=model.get_parameters() + embed.get_parameters(), alpha=0.005)  # Оптимизатор
+    criterion = CrossEntropyLoss()  # Функция потерь, вычисляет разницу (ошибку) между предсказанным и истинным значением
+    optim = SGD(parameters=model.get_parameters() + embed.get_parameters(), alpha=0.005)  # Оптимизатор, обновляет параметры модели на основе вычисленных градиентов
     train_accuracies = []  # Инициализация списка точностей по итерациям
     total_iter = 1000  # Кол-во итераций
 
